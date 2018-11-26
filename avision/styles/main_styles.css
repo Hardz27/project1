@@ -179,11 +179,11 @@ section
 }
 .trans_200
 {
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+	-webkit-transition: all 2000ms ease;
+	-moz-transition: all 2000ms ease;
+	-ms-transition: all 2000ms ease;
+	-o-transition: all 2000ms ease;
+	transition: all 2000ms ease;
 }
 .trans_300
 {
@@ -238,19 +238,20 @@ section
 .header
 {
 	position: fixed;
-	top: 0;
+	top: 300;
 	left: 0;
 	width: 100%;
-	z-index: 100;
+	z-index: 10;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
+	background: rgba(0,0,0,0.75);
 }
 .header_content
 {
-	height: 106px;
+	height: 100px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -259,6 +260,16 @@ section
 }
 .header.scrolled
 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
 	background: rgba(0,0,0,0.75);
 	box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
 }
@@ -1144,7 +1155,7 @@ section
 .card_large_with_background,
 .card_large_with_image
 {
-	width: 555px;
+	width: 800px;
 	/*height: 325px;*/
 }
 .card_small_no_image,
@@ -1153,7 +1164,7 @@ section
 .card_default_no_image,
 .card_default_with_background
 {
-	width: 263px;
+	width: 600px;
 }
 .card_small_with_image .card-body
 {

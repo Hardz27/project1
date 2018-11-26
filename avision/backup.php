@@ -1,3 +1,30 @@
+
+Skip to content
+
+    Pull requests
+    Issues
+    Marketplace
+    Explore
+
+    @Hardz27
+
+0
+0
+
+    0
+
+Hardz27/project1
+Code
+Issues 0
+Pull requests 0
+Projects 0
+Wiki
+Insights
+Settings
+project1/avision/index.php
+bf02781 4 days ago
+@Hardz27 Hardz27 Awalan
+1321 lines (1158 sloc) 54.5 KB
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,29 +43,25 @@
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 </head>
 <body>
-	<?php 
+<span> </span>
+<?php 
 		include "include/koneksi.php";
 		$query_mysql = mysqli_query($host, "SELECT tag_info, image, judul_info FROM update_info ORDER BY id_info DESC")or die(mysql_error());
+		$kueri = mysqli_query($host, " SELECT * FROM `update_info` ORDER BY `id_info` DESC ");
 		$i = 0;
 		$tag =array();
 		$judul =array();
-		$jumlah = mysqli_num_rows ($query_mysql);  		
+  		
 		while(($data = mysqli_fetch_array($query_mysql)) && $i <3){
 			$tag[$i] = $data['tag_info'];
 			$judul[$i] = $data['judul_info'];
-			$gam[$i] = $data['image'];
 			
 			$i++;
 		} 
-	?>
-	<br>
-	<div class="containerx">
-		<div class="d-flex flex-row align-items-center">
-			<div class="side_post_image"><div><img src="images/tugu.png" alt=""></div></div>
-			<div class="logo" style="font-size: 40px; text-align: center; align-items: center; align-content: center;">&nbsp;&nbsp;&nbsp;WEBSITE DESA TUGU</div>
-		</div>
-	</div>
-	<br>
+?>
+
+
+
 <div class="super_container">
 
 	<!-- Header -->
@@ -48,6 +71,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="side_post_image"><div><img src="images/tugu.png" alt=""></div></div>
 						<div class="logo"><a href="#">&nbsp;&nbsp;&nbsp;Wesatu</a></div>
 						<nav class="main_nav">
 							<ul>
@@ -58,6 +82,7 @@
 								<li><a href="#">Login&nbsp;&nbsp;&nbsp;</a></li>
 							</ul>
 						</nav>
+						<div class="side_post_image"><div><img src="images/desa.png" alt=""></div></div>
 						<div class="search_container ml-auto">
 							
 							<form action="#" style="margin-top:3px;">
@@ -112,7 +137,7 @@
 				<div class="owl-item">
 					
 					
-					<div class="home_slider_background"><?php echo '<img style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-repeat: no-repeat;	background-size: cover;	background-position: center center;" src="data:image/jpeg;base64,'.base64_encode( $gam[0] ).'"/>';?></div>
+					<div class="home_slider_background" style="background-image:url(images/home_slider.jpg)"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -144,7 +169,7 @@
 
 
 								<?php
-									$query_data = mysqli_query($host, "SELECT judul_info FROM update_info ORDER BY id_info DESC")or die(mysql_error());
+									$query_data = mysqli_query($host, "SELECT  judul_info FROM update_info")or die(mysql_error());
 									 $a = 0;
 									while ($a < 3) {
 										$hasil = mysqli_fetch_array($query_data);
@@ -171,7 +196,7 @@
 								<div class="home_slider_next_background trans_400"></div>
 								<div class="home_slider_next_content trans_400">
 									<div class="home_slider_next_title">next</div>
-									<div class="home_slider_next_link"><?php echo $judul[1]; ?></div>
+									<div class="home_slider_next_link">How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</div>
 								</div>
 							</div>
 						</div>
@@ -180,16 +205,12 @@
 				</div>
 
 				<?php
-					$query_new = mysqli_query($host, "SELECT image FROM update_info ORDER BY id_info DESC")or die(mysql_error());
 					$n = 1;
-					while(($resu = mysqli_fetch_array($query_new)) && $n <3){
-						if ($n == 1) {
-							$resu = mysqli_fetch_array($query_new);
-						}
+					while ($n < 3) {
 				?>
 				<!-- Slider Item -->
 				<div class="owl-item">
-					<div class="home_slider_background"><?php echo '<img style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-repeat: no-repeat;	background-size: cover;	background-position: center center;" src="data:image/jpeg;base64,'.base64_encode( $resu['image'] ).'"/>';?></div>
+					<div class="home_slider_background" style="background-image:url(images/home_slider.jpg)"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -244,13 +265,7 @@
 								<div class="home_slider_next_background trans_400"></div>
 								<div class="home_slider_next_content trans_400">
 									<div class="home_slider_next_title">next</div>
-									<?php if (($n+1)==3) { ?>
-										<div class="home_slider_next_link"><?php echo $judul[0]; ?></div>
-									<?php } 
-									else{ ?>
-										<div class="home_slider_next_link"><?php echo $judul[$n+1]; ?></div>
-									<?php } ?>
-									
+									<div class="home_slider_next_link">How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</div>
 								</div>
 							</div>
 						</div>
@@ -331,38 +346,74 @@
 							<div class="section_content">
 								<div class="grid clearfix">
 
-									<?php
-										$query_data = mysqli_query($host, "SELECT tag_info, judul_info, image, info FROM update_info ORDER BY id_info DESC")or die(mysql_error());
-										 $a = 0;
-										while ($a < $jumlah) {
-											$hasil = mysqli_fetch_array($query_data);
-										 	$data[$a] = $hasil['judul_info'];
-										 	$info[$a] = $hasil['info'];
-										 	$tag[$a] = $hasil['tag_info'];
-										 	$image[$a] = $hasil['image'];
-										 	
-										 	$link = mysqli_query($host, "SELECT id_user FROM admin WHERE id_staff='1703034'")or die(mysql_error());
-										 	$res = mysqli_fetch_array($link);
-										 	$admin = $res['id_user'];
-										 	if($a>2){
-									?>
-
 									<!-- Largest Card With Image -->
-									<div class="card card_default card_largest_with_image grid-item">
-										<img class="card-img-top" src="" alt=""><?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $hasil['image'] ).'"/>';?>
+									<div class="card card_largest_with_image grid-item">
+										<img class="card-img-top" src="images/post_1.jpg" alt="https://unsplash.com/@cjtagupa">
 										<div class="card-body">
-											<div class="card-title card-title-small"><a href="post.html"><?php echo $data[$a]; ?></a></div>
-											<p class="card-text"><?php echo $info[$a];?></p>
-											<small class="post_meta"><a href="#"><?php echo $admin;?></a><span><?php echo $tag[$a];?></span></small>
+											<div class="card-title"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</a></div>
+											<p class="card-text">Pick the yellow peach that looks like a sunset with its red, orange, and pink coat skin, peel it off with your teeth. Sink them into unripened...</p>
+											<small class="post_meta"><a href="#">Katy Liu</a><span>Sep 29, 2017 at 9:48 am</span></small>
 										</div>
 									</div>
 
+									<!-- Small Card Without Image -->
+									<div class="card card_default card_small_no_image grid-item">
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</a></div>
+											<small class="post_meta"><a href="#">Katy Liu</a><span>Sep 29, 2017 at 9:48 am</span></small>
+										</div>
+									</div>
 
-								<?php
-								}
-									$a++;
-										}
-								?>
+									<!-- Small Card With Background -->
+									<div class="card card_default card_small_with_background grid-item">
+										<div class="card_background" style="background-image:url(images/post_4.jpg)"></div>
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</a></div>
+											<small class="post_meta"><a href="#">Katy Liu</a><span>Sep 29, 2017 at 9:48 am</span></small>
+										</div>
+									</div>
+
+									<!-- Small Card With Image -->
+									<div class="card card_small_with_image grid-item">
+										<img class="card-img-top" src="images/post_2.jpg" alt="https://unsplash.com/@jakobowens1">
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</a></div>
+											<small class="post_meta"><a href="#">Katy Liu</a><span>Sep 29, 2017 at 9:48 am</span></small>
+										</div>
+									</div>
+
+									<!-- Small Card With Image -->
+									<div class="card card_small_with_image grid-item">
+										<img class="card-img-top" src="images/post_3.jpg" alt="https://unsplash.com/@jannerboy62">
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</a></div>
+											<small class="post_meta"><a href="#">Katy Liu</a><span>Sep 29, 2017 at 9:48 am</span></small>
+										</div>
+									</div>
+
+									<!-- Default Card No Image -->
+
+									<div class="card card_default card_default_no_image grid-item">
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most</a></div>
+										</div>
+									</div>
+
+									<!-- Default Card No Image -->
+
+									<div class="card card_default card_default_no_image grid-item">
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most</a></div>
+										</div>
+									</div>
+
+									<!-- Default Card No Image -->
+
+									<div class="card card_default card_default_no_image grid-item">
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most</a></div>
+										</div>
+									</div>
 
 								</div>
 							</div>
@@ -370,10 +421,189 @@
 
 						<!-- Blog Section - What's Trending -->
 
-						
+						<div class="blog_section">
+							<div class="section_panel d-flex flex-row align-items-center justify-content-start">
+								<div class="section_title">What's Trending</div>
+								<div class="section_tags ml-auto">
+									<ul>
+										<li class="active"><a href="category.html">all</a></li>
+										<li><a href="category.html">style hunter</a></li>
+										<li><a href="category.html">vogue</a></li>
+										<li><a href="category.html">health & fitness</a></li>
+										<li><a href="category.html">travel</a></li>
+									</ul>
+								</div>
+								<div class="section_panel_more">
+									<ul>
+										<li>more
+											<ul>
+												<li><a href="category.html">new look 2018</a></li>
+												<li><a href="category.html">street fashion</a></li>
+												<li><a href="category.html">business</a></li>
+												<li><a href="category.html">recipes</a></li>
+												<li><a href="category.html">sport</a></li>
+												<li><a href="category.html">celebrities</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="section_content">
+								<div class="grid clearfix">
+									
+									<!-- Large Card With Background -->
+									<div class="card card_large_with_background grid-item">
+										<div class="card_background" style="background-image:url(images/post_8.jpg)"></div>
+										<div class="card-body">
+											<div class="card-title"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</a></div>
+											<small class="post_meta"><a href="#">Katy Liu</a><span>Sep 29, 2017 at 9:48 am</span></small>
+										</div>
+									</div>
+									
+									<!-- Large Card With Image -->
+									<div class="card grid-item card_large_with_image">
+										<img class="card-img-top" src="images/post_9.jpg" alt="">
+										<div class="card-body">
+											<div class="card-title"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</a></div>
+											<p class="card-text">Pick the yellow peach that looks like a sunset with its red, orange, and pink coat skin, peel it off with your teeth. Sink them into unripened...</p>
+											<small class="post_meta"><a href="#">Katy Liu</a><span>Sep 29, 2017 at 9:48 am</span></small>
+										</div>
+									</div>
+
+									<!-- Default Card With Image -->
+									<div class="card card_small_with_image grid-item">
+										<img class="card-img-top" src="images/post_5.jpg" alt="">
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</a></div>
+											<small class="post_meta"><a href="#">Katy Liu</a><span>Sep 29, 2017 at 9:48 am</span></small>
+										</div>
+									</div>
+									
+									<!-- Default Card With Background -->
+
+									<div class="card card_default card_default_with_background grid-item">
+										<div class="card_background" style="background-image:url(images/post_6.jpg)"></div>
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most</a></div>
+										</div>
+									</div>
+
+									<!-- Default Card No Image -->
+									<div class="card card_default card_default_no_image grid-item">
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most</a></div>
+										</div>
+									</div>
+
+									<!-- Default Card No Image -->
+									<div class="card card_default card_default_no_image grid-item">
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most</a></div>
+										</div>
+									</div>
+
+									<!-- Default Card With Background -->
+
+									<div class="card card_default card_default_with_background grid-item">
+										<div class="card_background" style="background-image:url(images/post_7.jpg)"></div>
+										<div class="card-body">
+											<div class="card-title card-title-small"><a href="post.html">How Did van Gogh’s Turbulent Mind Depict One of the Most</a></div>
+										</div>
+									</div>
+
+								</div>
+								
+							</div>
+						</div>
+
+						<!-- Blog Section - Videos -->
+
+						<div class="blog_section">
+							<div class="section_panel d-flex flex-row align-items-center justify-content-start">
+								<div class="section_title">Most Popular Videos</div>
+							</div>
+							<div class="section_content">
+								<div class="row">
+									<div class="col">
+										<div class="videos">
+											<div class="player_container">
+												<div id="P1" class="player" 
+												     data-property="{videoURL:'2ScS5kwm7nI',containment:'self',startAt:0,mute:false,autoPlay:false,loop:false,opacity:1}">
+												</div>
+											</div>
+											<div class="playlist">
+												<div class="playlist_background"></div>
+
+												<!-- Video -->
+												<div class="video_container video_command active" onclick="jQuery('#P1').YTPChangeVideo({videoURL: '2ScS5kwm7nI', mute:false, addRaster:true})">
+													<div class="video d-flex flex-row align-items-center justify-content-start">
+														<div class="video_image"><div><img src="images/video_1.jpg" alt=""></div><img class="play_img" src="images/play.png" alt=""></div>
+														<div class="video_content">
+															<div class="video_title">How Did van Gogh’s Turbulent Mind</div>
+															<div class="video_info"><span>1.2M views</span><span>Sep 29</span></div>
+														</div>
+													</div>
+												</div>
+
+												<!-- Video -->
+												<div class="video_container video_command" onclick="jQuery('#P1').YTPChangeVideo({videoURL: 'BzMLA8YIgG0', mute:false, addRaster:true})">
+													<div class="video d-flex flex-row align-items-center justify-content-start">
+														<div class="video_image"><div><img src="images/video_2.jpg" alt=""></div><img class="play_img" src="images/play.png" alt=""></div>
+														<div class="video_content">
+															<div class="video_title">How Did van Gogh’s Turbulent Mind</div>
+															<div class="video_info"><span>1.2M views</span><span>Sep 29</span></div>
+														</div>
+													</div>
+												</div>
+
+												<!-- Video -->
+												<div class="video_container video_command" onclick="jQuery('#P1').YTPChangeVideo({videoURL: 'bpbcSdqvtUQ', mute:false, addRaster:true})">
+													<div class="video d-flex flex-row align-items-center justify-content-start">
+														<div class="video_image"><div><img src="images/video_3.jpg" alt=""></div><img class="play_img" src="images/play.png" alt=""></div>
+														<div class="video_content">
+															<div class="video_title">How Did van Gogh’s Turbulent Mind</div>
+															<div class="video_info"><span>1.2M views</span><span>Sep 29</span></div>
+														</div>
+													</div>
+												</div>
+
+												<!-- Video -->
+												<div class="video_container video_command" onclick="jQuery('#P1').YTPChangeVideo({videoURL: 'UjYemgbhJF0', mute:false, addRaster:true})">
+													<div class="video d-flex flex-row align-items-center justify-content-start">
+														<div class="video_image"><div><img src="images/video_4.jpg" alt=""></div><img class="play_img" src="images/play.png" alt=""></div>
+														<div class="video_content">
+															<div class="video_title">How Did van Gogh’s Turbulent Mind</div>
+															<div class="video_info"><span>1.2M views</span><span>Sep 29</span></div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Blog Section - Latest -->
+
+						<div class="blog_section">
+							<div class="section_panel d-flex flex-row align-items-center justify-content-start">
+								<div class="section_title">Latest Articles</div>
+							</div>
+							<div class="section_content">
+								<div class="grid clearfix">
+									
+									
+								</div>
+								
+							</div>
+						</div>
 
 					</div>
-
+					<div class="load_more">
+						<div id="load_more" class="load_more_button text-center trans_200">Load More</div>
+					</div>
 				</div>
 
 				<!-- Sidebar -->
@@ -1076,7 +1306,7 @@
 	</div>
 
 	<!-- Footer -->
-	<BR>
+
 	<footer class="footer">
 		<div class="container">
 			<div class="row row-lg-eq-height">
@@ -1114,3 +1344,19 @@
 <script src="js/custom.js"></script>
 </body>
 </html>
+
+    © 2018 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Help
+
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+Press h to open a hovercard with more details.
