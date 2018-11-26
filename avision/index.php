@@ -16,6 +16,8 @@
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 </head>
 <body>
+	<br>
+	<div class="side_post_image"><p style="font-size: 60px" align="center"><div><img src="images/tugu.png" alt="">WEBSITE DESA TUGU</div></p></div><br>
 <span> </span>
 <?php 
 		include "include/koneksi.php";
@@ -39,17 +41,18 @@
 <div class="super_container">
 
 	<!-- Header -->
-
+	<br>
+	<br>
 	<header class="header">
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
-						<div class="side_post_image"><div><img src="images/tugu.png" alt=""></div></div>
+						
 						<div class="logo"><a href="#">&nbsp;&nbsp;&nbsp;Wesatu</a></div>
 						<nav class="main_nav">
 							<ul>
-								<li class="active"><a href="index.html">Home</a></li>
+								<li class="active"><a href="index.php">Home</a></li>
 								<li><a href="#">Profil</a></li>
 								<li><a href="#">Suara Rakyat</a></li>
 								<li><a href="#">Pembuatan Surat</a></li>
@@ -87,7 +90,7 @@
 		</div>
 		<nav class="menu_nav">
 			<ul class="menu_mm">
-				<li class="active"><a href="index.html">Home</a></li>
+				<li class="active"><a href="index.php">Home</a></li>
 				<li><a href="#">Profil</a></li>
 				<li><a href="#">Suara Rakyat</a></li>
 				<li><a href="#">Pembuatan Surat</a></li>
@@ -563,22 +566,16 @@
 						<!-- Blog Section - Latest -->
 
 						<div class="blog_section">
-							<div class="section_panel d-flex flex-row align-items-center justify-content-start">
+							<!-- <div class="section_panel d-flex flex-row align-items-center justify-content-start">
 								<div class="section_title">Latest Articles</div>
-							</div>
-							<div class="section_content">
-								<div class="grid clearfix">
-									
-									
-								</div>
-								
-							</div>
+							</div> -->
+							
 						</div>
 
 					</div>
-					<div class="load_more">
+					<!-- <div class="load_more">
 						<div id="load_more" class="load_more_button text-center trans_200">Load More</div>
-					</div>
+					</div> -->
 				</div>
 
 				<!-- Sidebar -->
