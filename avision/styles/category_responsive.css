@@ -164,6 +164,7 @@
 	}
 	.home_slider_item_title a
 	{
+		background: #899091;
 		font-size: 28px;
 	}
 	.home_slider_content
@@ -387,6 +388,7 @@
 	}
 	.home_slider_item_title a
 	{
+		background: #899091;
 		font-size: 24px;
 	}
 	.card-body

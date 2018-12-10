@@ -1,4 +1,4 @@
-/*!
+!
  * Bootstrap v4.0.0-beta.2 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
@@ -217,7 +217,13 @@ display:inline-block;margin-bottom:.5rem
 }
 
 button{
-border-radius:0
+border-radius:0;
+border-color: transparent;
+background-color: transparent;
+color :rgba(255,255,255,0.5);
+font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
 }
 
 button:focus{
@@ -1566,7 +1572,7 @@ border:0
 }
 
 .form-control{
-display:block;width:100%;padding:.375rem .75rem;font-size:1rem;line-height:1.5;color:#495057;background-color:#fff;background-image:none;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s
+display:block;width:50%;padding:.375rem .75rem;font-size:1rem;line-height:1.5;color:#495057;background-color:#fff;background-image:none;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s
 }
 
 .form-control::-ms-expand{
@@ -1592,6 +1598,7 @@ color:#868e96;opacity:1
 .form-control::placeholder{
 color:#868e96;opacity:1
 }
+
 
 .form-control:disabled,.form-control[readonly]{
 background-color:#e9ecef;opacity:1
@@ -6882,4 +6889,4 @@ visibility:hidden!important
 }
 
 
-/*# sourceMappingURL=bootstrap.min.css.map */
+/*# sourceMappingURL=bootstrap.min.css.map 

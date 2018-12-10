@@ -18,18 +18,18 @@
 <body>
 	<?php 
 		include "include/koneksi.php";
-		$query_mysql = mysqli_query($host, "SELECT judul_info, isi_info, pegawai FROM profile ORDER BY id_info ASC")or die(mysql_error());
+		$query_mysql = mysqli_query($host, "SELECT tag_info, image, judul_info FROM update_info ORDER BY id_info DESC")or die(mysql_error());
 		$i = 0;
 		$tag =array();
 		$judul =array();
 		$jumlah = mysqli_num_rows ($query_mysql);  		
-		// while(($data = mysqli_fetch_array($query_mysql)) && $i <3){
-		// 	$tag[$i] = $data['tag_info'];
-		// 	$judul[$i] = $data['judul_info'];
-		// 	$gam[$i] = $data['image'];
+		while(($data = mysqli_fetch_array($query_mysql)) && $i <3){
+			$tag[$i] = $data['tag_info'];
+			$judul[$i] = $data['judul_info'];
+			$gam[$i] = $data['image'];
 			
-		// 	$i++;
-		// } 
+			$i++;
+		} 
 	?>
 	<br>
 	<div class="containerx">
@@ -48,13 +48,13 @@
 			<div class="row">
 				<div class="col">
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
-						<div class="logo"><a href="#">&nbsp;&nbsp;&nbsp;Wesatu</a></div>
+						<div class="logo"><a href="index.php">&nbsp;&nbsp;&nbsp;Wesatu</a></div>
 						<nav class="main_nav">
 							<ul>
 								
 								<li><a href="index.php">Home</a></li>
-								<li class="active"><a href="profile.php">Profile</a></li>
-								<li><a href="suara_rakyat.php">Suara Rakyat</a></li>
+								<li><a href="profile.php">Profile</a></li>
+								<li class="active"><a href="suara_rakyat.php">Suara Rakyat</a></li>
 								<li><a href="p_surat.php">Pembuatan Surat</a></li>
 								<li><a href="login.php">Login&nbsp;&nbsp;&nbsp;</a></li>
 							</ul>
@@ -80,7 +80,7 @@
 
 	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
 		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<div class="logo menu_mm"><a href="index.php">HOME</a></div>
+		<div class="logo menu_mm"><a href="index.php">Avision</a></div>
 		<div class="search">
 			<form action="#">
 				<input type="search" class="header_search_input menu_mm" required="required" placeholder="Type to Search...">
@@ -90,8 +90,8 @@
 		<nav class="menu_nav">
 			<ul class="menu_mm">
 				<li><a href="index.php">Home</a></li>
-				<li class="active"><a href="profile.php">Profile</a></li>
-				<li><a href="suara_rakyat.php">Suara Rakyat</a></li>
+				<li><a href="profile.php">Profile</a></li>
+				<li class="active"><a href="suara_rakyat.php">Suara Rakyat</a></li>
 				<li><a href="p_surat.php">Pembuatan Surat</a></li>
 				<li><a href="login.php">Login&nbsp;&nbsp;&nbsp;</a></li>
 			</ul>
@@ -113,14 +113,23 @@
 				<div class="owl-item">
 					
 					
-					<div class="home_slider_background" style="background-image: url('tugu image/kantor.jpg');"></div>
+					<div class="home_slider_background"><?php echo '<img style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-repeat: no-repeat;	background-size: cover;	background-position: center center;" src="data:image/jpeg;base64,'.base64_encode( $gam[0] ).'"/>';?></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
 								<div class="col">
 									<div class="home_slider_content">
+										<div class="home_slider_item_category trans_200"><a href="category.html" class="trans_200"><?php echo $tag[0]; ?></a></div>
+										<div class="home_slider_item_title">
+											<a href="post.html"><?php echo $judul[0]; ?></a>
+										</div>
 										<div class="home_slider_item_link">
-											
+											<a href="post.html" class="trans_200">Continue Reading
+												<svg version="1.1" id="link_arrow_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													 width="19px" height="13px" viewBox="0 0 19 13" enable-background="new 0 0 19 13" xml:space="preserve">
+													<polygon fill="#FFFFFF" points="12.475,0 11.061,0 17.081,6.021 0,6.021 0,7.021 17.038,7.021 11.06,13 12.474,13 18.974,6.5 "/>
+												</svg>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -136,7 +145,7 @@
 
 
 								<?php
-									$query_data = mysqli_query($host, "SELECT judul_info FROM update_info ORDER BY id_info ASC")or die(mysql_error());
+									$query_data = mysqli_query($host, "SELECT judul_info FROM update_info ORDER BY id_info DESC")or die(mysql_error());
 									 $a = 0;
 									while ($a < 3) {
 										$hasil = mysqli_fetch_array($query_data);
@@ -166,7 +175,7 @@
 				</div>
 
 				<?php
-					$query_new = mysqli_query($host, "SELECT image FROM update_info ORDER BY id_info ASC")or die(mysql_error());
+					$query_new = mysqli_query($host, "SELECT image FROM update_info ORDER BY id_info DESC")or die(mysql_error());
 					$n = 1;
 					while(($resu = mysqli_fetch_array($query_new)) && $n <3){
 						if ($n == 1) {
@@ -204,7 +213,7 @@
 						<div class="container">
 							<div class="row d-flex flex-row align-items-end">
 								<?php
-									$query_data = mysqli_query($host, "SELECT  judul_info FROM update_info ORDER BY id_info ASC")or die(mysql_error());
+									$query_data = mysqli_query($host, "SELECT  judul_info FROM update_info ORDER BY id_info DESC")or die(mysql_error());
 									 $a = 0;
 									while ($a < 3) {
 										$hasil = mysqli_fetch_array($query_data);
@@ -285,55 +294,46 @@
 				<div class="col-lg-9">
 					<div class="main_content">
 
-						<div class="section_content">
-								<div class="grid clearfix">
-									<!-- Mulai pengambilan data -->
-									<?php
-										$query_data = mysqli_query($host, "SELECT judul_info, isi_info, pegawai FROM profile ORDER BY id_info ASC")or die(mysql_error());
-										 $a = 0;
-										while ($a < $jumlah) {
-											$hasil = mysqli_fetch_array($query_data);
-										 	$judul[$a] = $hasil['judul_info'];
-										 	$info[$a] = $hasil['isi_info'];
-										 	$pegawai[$a] = $hasil['pegawai'];
-										 	
-										 	// $link = mysqli_query($host, "SELECT id_user FROM admin WHERE id_staff='1703034'")or die(mysql_error());
-										 	// $res = mysqli_fetch_array($link);
-										 	// $admin = $res['id_user'];
-										 	
-									?>
-
-									<!-- Largest Card With Image -->
-									<div class="card card_default card_largest_with_image grid-item">
-										<div class="card-body">
-											<div class="card-title card-title-small"><a href="post.html"><?php echo $judul[$a]; ?></a></div>
-											<p class="card-text"><?php echo $info[$a];?></p>
-											<small class="post_meta"><a href="#"><?php echo $pegawai[$a];?></a><!-- <span><?php echo $tag[$a];?></span> --></small>
-										</div>
-									</div>
-
-
-								<?php
-									$a++;
-										}
-								?>
-
-								</div>
-							</div>
-
 						<!-- Blog Section - Don't Miss -->
 
 						<div class="blog_section">
 							<div class="section_panel d-flex flex-row align-items-center justify-content-start">
 								
-								
+								<div class="d-flex">
+									<div class="dropdown mr-1">
+										<button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+											PILIH KATEGORI
+										</button>
+
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+											<a class="active"="dropdown-item" href="kategorikeamanan.php=">Keamanan</a>
+											<a class="dropdown-item" href="#">Ekonomi</a>
+											<a class="dropdown-item" href="#">Sosial </a>
+											<a class="dropdown-item" href="#">Infrastruktur </a>
+											<br>
+											<br>
+
+										</div>
+									</div>
+								</div>
+
+									<br>
+									<br>
+									<br>
+									<form action="" method="post">  
+										<textarea rows="5" cols="50" name="komentar"></textarea><br/>  
+										<input type="submit" name="enter" value="Kirim">  
+									</form>  
+
+
+
 								
 							</div>
 							
 						</div>
 
 						<!-- Blog Section - What's Trending -->
-
+													
 						
 
 					</div>
@@ -342,7 +342,7 @@
 
 				<!-- Sidebar -->
 
-				<div class="col-lg-3">
+				<div class="col-lg-3 pull-right">
 					<div class="sidebar">
 						<div class="sidebar_background"></div>
 
@@ -1046,7 +1046,7 @@
 			<div class="row row-lg-eq-height">
 				<div class="col-lg-12">
 					<div class="footer_content">
-						<div class="footer_logo"><a href="index.php">WESATU</a></div>
+						<div class="footer_logo"><a href="#">avision</a></div>
 						<div class="footer_social">
 							<ul>
 								<li class="footer_social_facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -1057,7 +1057,7 @@
 								<li class="footer_social_google"><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
-						<div class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> PROJECT 1 |  WEBSITE DESA TUGU | WESATU |   <a href="https://colorlib.com" target="_blank">KELOMPOK 5</a>
+						<div class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 						</div>
 					</div>
 				</div>

@@ -11,14 +11,14 @@ if(isset($_POST['simpan'])){
     else
     {
  $image   = addslashes(file_get_contents($_FILES['image']['tmp_name']));
-     $image_name = addslashes($_FILES['image']['name']);
-        $image_size = getimagesize($_FILES['image']['tmp_name']);
+ $image_name = addslashes($_FILES['image']['name']);
+ $image_size = getimagesize($_FILES['image']['tmp_name']);
     if($image_size == false){
    echo 'File yang anda pilih Bukan gambar';
         }
         else
         {
-          if(!$insert = mysqli_query($host, "INSERT INTO update_info VALUES(NULL, '$judul','$image_name', '$image', '', '1703034' ) "))
+          if(!$insert = mysqli_query($host, "INSERT INTO update_info VALUES(NULL, '$judul','$image_name','coba', '$image', '', '1703034' ) "))
             {
                 echo 'Gagal upload gambar';
      }
