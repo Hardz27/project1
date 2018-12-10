@@ -51,11 +51,11 @@
 						<div class="logo"><a href="#">&nbsp;&nbsp;&nbsp;Wesatu</a></div>
 						<nav class="main_nav">
 							<ul>
-								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="#">Profil</a></li>
-								<li><a href="#">Suara Rakyat</a></li>
-								<li><a href="#">Pembuatan Surat</a></li>
-								<li><a href="#">Login&nbsp;&nbsp;&nbsp;</a></li>
+								<li class="active"><a href="index.php">Home</a></li>
+								<li><a href="Profile.php">Profil</a></li>
+								<li><a href="suara_rakyat.php">Suara Rakyat</a></li>
+								<li><a href="p_surat.php">Pembuatan Surat</a></li>
+								<li><a href="login.php">Login&nbsp;&nbsp;&nbsp;</a></li>
 							</ul>
 						</nav>
 						<div class="search_container ml-auto">
@@ -88,11 +88,11 @@
 		</div>
 		<nav class="menu_nav">
 			<ul class="menu_mm">
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="#">Profil</a></li>
-				<li><a href="#">Suara Rakyat</a></li>
-				<li><a href="#">Pembuatan Surat</a></li>
-				<li><a href="#">Login</a></li>
+				<li class="active"><a href="index.php">Home</a></li>
+				<li><a href="profile.php">Profil</a></li>
+				<li><a href="suara_rakyat.php">Suara Rakyat</a></li>
+				<li><a href="p_surat.php">Pembuatan Surat</a></li>
+				<li><a href="login.php">Login</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -166,15 +166,7 @@
 							</div>
 						</div>
 						
-						<div class="home_slider_next_container">
-							<div class="home_slider_next" style="background-image:url(images/home_slider_next.jpg)">
-								<div class="home_slider_next_background trans_400"></div>
-								<div class="home_slider_next_content trans_400">
-									<div class="home_slider_next_title">next</div>
-									<div class="home_slider_next_link"><?php echo $judul[1]; ?></div>
-								</div>
-							</div>
-						</div>
+						<!--  -->
 
 					</div>
 				</div>
@@ -299,35 +291,7 @@
 				<div class="col-lg-9">
 					<div class="main_content">
 
-						<!-- Blog Section - Don't Miss -->
-
-						<div class="blog_section">
-							<div class="section_panel d-flex flex-row align-items-center justify-content-start">
-								<div class="section_title">Don't Miss</div>
-								<div class="section_tags ml-auto">
-									<ul>
-										<li class="active"><a href="category.html">all</a></li>
-										<li><a href="category.html">style hunter</a></li>
-										<li><a href="category.html">vogue</a></li>
-										<li><a href="category.html">health & fitness</a></li>
-										<li><a href="category.html">travel</a></li>
-									</ul>
-								</div>
-								<div class="section_panel_more">
-									<ul>
-										<li>more
-											<ul>
-												<li><a href="category.html">new look 2018</a></li>
-												<li><a href="category.html">street fashion</a></li>
-												<li><a href="category.html">business</a></li>
-												<li><a href="category.html">recipes</a></li>
-												<li><a href="category.html">sport</a></li>
-												<li><a href="category.html">celebrities</a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
+						
 							<div class="section_content">
 								<div class="grid clearfix">
 
@@ -1075,6 +1039,8 @@
 		</div>
 	</div>
 
+
+
 	<!-- Footer -->
 	<BR>
 	<footer class="footer">
@@ -1082,7 +1048,7 @@
 			<div class="row row-lg-eq-height">
 				<div class="col-lg-12">
 					<div class="footer_content">
-						<div class="footer_logo"><a href="#">avision</a></div>
+						<div class="footer_logo"><a href="index.php">WESATU</a></div>
 						<div class="footer_social">
 							<ul>
 								<li class="footer_social_facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -1093,7 +1059,7 @@
 								<li class="footer_social_google"><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
-						<div class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						<div class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> PROJECT 1 |  WEBSITE DESA TUGU | WESATU |   <a href="https://colorlib.com" target="_blank">KELOMPOK 5</a>
 						</div>
 					</div>
 				</div>

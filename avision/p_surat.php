@@ -6,6 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Demo project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main css -->
+<link rel="stylesheet" type="text/css" href="stylereg.css">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
@@ -14,6 +16,29 @@
 <link rel="stylesheet" type="text/css" href="plugins/jquery.mb.YTPlayer-3.1.12/jquery.mb.YTPlayer.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <!-- Font Icon --><!-- 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
+
 </head>
 <body>
 	<?php 
@@ -55,7 +80,7 @@
 								<li><a href="index.php">Home</a></li>
 								<li ><a href="profile.php">Profile</a></li>
 								<li><a href="suara_rakyat.php">Suara Rakyat</a></li>
-								<li class="active">
+							<!-- 	<li class="active"> -->
 									<!-- <a href="p_surat.php">Pembuatan Surat</a> -->
 									<div class="btn-group">
 										<button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -93,7 +118,7 @@
 
 	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
 		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<div class="logo menu_mm"><a href="index.php">Avision</a></div>
+		<div class="logo menu_mm"><a href="index.php">wesatu</a></div>
 		<div class="search">
 			<form action="#">
 				<input type="search" class="header_search_input menu_mm" required="required" placeholder="Type to Search...">
@@ -315,52 +340,55 @@
 								
 								
 							</div>
-							
+							<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/img-01.jpg');">
+			<div class="wrap-login100 p-t-190 p-b-30">
+				<form class="login100-form validate-form">
+					<div class="login100-form-avatar">
+						<img src="tugu image/login.png" alt="AVATAR">
+					</div>
+
+					<span class="login100-form-title p-t-20 p-b-45">
+						FORM LOGIN
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+						<input class="input100" type="text" name="username" placeholder="Username">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+						<input class="input100" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock"></i>
+						</span>
+					</div>
+
+					<td colspan="3"><input type="submit" name="submit" value="Login"></td>
+            </tr>
+					</div>
+
+					<div class="text-center w-full p-t-25 p-b-230">
+						<a href="#" class="txt1">
+							Forgot Username / Password?
+						</a>
+					</div>
+
+					<div class="text-center w-full">
+						<a class="txt1" href="index.html">
+							Create new account
+							<i class="fa fa-long-arrow-right"></i>						
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 						</div>
-
-						<!-- Blog Section - What's Trending -->
-						<p align="center"><B><h2>WEBSITE DESA TUGU </h2></B></p>
-						
-						<h3>SURAT IZIN USAHA </h3>
-						<br>
-
-						<form method = 'post' action= "form_aksi_surat.php">
-							<table>
-							<tr>
-							<td>Nama</td>
-							<td>: </td>
-							<td><input type='text' name='nama'></td>
-							</tr>
-							<br>
-							<tr>
-							<td>Umur</td>
-							<td>: </td>
-							<td><input type='text' name='umur'></td>
-							</tr>
-							<tr>
-							<td>Alamat</td>
-							<td>: </td>
-							<td><input type='text' name='alamat'></td>
-							</tr>
-							<tr>
-							<td></td>
-							<td></td>
-							<td><input type='submit' value='KIRIM'></td>
-							</tr>
-							</table>  
-							</form>
-							<br>
-							<br>
-							<br>
-
-
-							<P align = "center"> Silahkan datang ke kantor Kuwu Desa Tugu Lelea dengan membawa persyaratan sebagai berikut : 
-							<ol start="1"> 
-								<li>1 Foto copy KK</li>
-								<li>1 Foto Copy KTP </li>
-							</ul>
-							</p>
-						
 
 					</div>
 
@@ -372,684 +400,6 @@
 					<div class="sidebar">
 						<div class="sidebar_background"></div>
 
-						<!-- Top Stories -->
-
-						<div class="sidebar_section">
-							<div class="sidebar_title_container">
-								<div class="sidebar_title">Top Stories</div>
-								<div class="sidebar_slider_nav">
-									<div class="custom_nav_container sidebar_slider_nav_container">
-										<div class="custom_prev custom_prev_top">
-											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-											 width="7px" height="12px" viewBox="0 0 7 12" enable-background="new 0 0 7 12" xml:space="preserve">
-												<polyline fill="#bebebe" points="0,5.61 5.609,0 7,0 7,1.438 2.438,6 7,10.563 7,12 5.609,12 -0.002,6.39 "/>
-											</svg>
-										</div>
-								        <ul id="custom_dots" class="custom_dots custom_dots_top">
-											<li class="custom_dot custom_dot_top active"><span></span></li>
-											<li class="custom_dot custom_dot_top"><span></span></li>
-											<li class="custom_dot custom_dot_top"><span></span></li>
-										</ul>
-										<div class="custom_next custom_next_top">
-											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-												 width="7px" height="12px" viewBox="0 0 7 12" enable-background="new 0 0 7 12" xml:space="preserve">
-												<polyline fill="#bebebe" points="6.998,6.39 1.389,12 -0.002,12 -0.002,10.562 4.561,6 -0.002,1.438 -0.002,0 1.389,0 7,5.61 "/>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sidebar_section_content">
-
-								<!-- Top Stories Slider -->
-								<div class="sidebar_slider_container">
-									<div class="owl-carousel owl-theme sidebar_slider_top">
-
-										<!-- Top Stories Slider Item -->
-										<div class="owl-item">
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_1.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_2.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_3.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_4.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-										</div>
-
-										<!-- Top Stories Slider Item -->
-										<div class="owl-item">
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_1.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_2.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_3.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_4.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-										</div>
-
-										<!-- Top Stories Slider Item -->
-										<div class="owl-item">
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_1.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_2.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_3.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Sidebar Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/top_4.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Advertising -->
-
-						<div class="sidebar_section">
-							<div class="advertising">
-								<div class="advertising_background" style="background-image:url(images/post_17.jpg)"></div>
-								<div class="advertising_content d-flex flex-column align-items-start justify-content-end">
-									<div class="advertising_perc">-15%</div>
-									<div class="advertising_link"><a href="#">How Did van Gogh’s Turbulent Mind</a></div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Newest Videos -->
-
-						<div class="sidebar_section newest_videos">
-							<div class="sidebar_title_container">
-								<div class="sidebar_title">Newest Videos</div>
-								<div class="sidebar_slider_nav">
-									<div class="custom_nav_container sidebar_slider_nav_container">
-										<div class="custom_prev custom_prev_vid">
-											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-												 width="7px" height="12px" viewBox="0 0 7 12" enable-background="new 0 0 7 12" xml:space="preserve">
-												<polyline fill="#bebebe" points="0,5.61 5.609,0 7,0 7,1.438 2.438,6 7,10.563 7,12 5.609,12 -0.002,6.39 "/>
-											</svg>
-										</div>
-								        <ul id="custom_dots" class="custom_dots custom_dots_vid">
-											<li class="custom_dot custom_dot_vid active"><span></span></li>
-											<li class="custom_dot custom_dot_vid"><span></span></li>
-											<li class="custom_dot custom_dot_vid"><span></span></li>
-										</ul>
-										<div class="custom_next custom_next_vid">
-											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-												 width="7px" height="12px" viewBox="0 0 7 12" enable-background="new 0 0 7 12" xml:space="preserve">
-												<polyline fill="#bebebe" points="6.998,6.39 1.389,12 -0.002,12 -0.002,10.562 4.561,6 -0.002,1.438 -0.002,0 1.389,0 7,5.61 "/>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sidebar_section_content">
-
-								<!-- Sidebar Slider -->
-								<div class="sidebar_slider_container">
-									<div class="owl-carousel owl-theme sidebar_slider_vid">
-
-										<!-- Newest Videos Slider Item -->
-										<div class="owl-item">
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_1.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_2.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_3.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_4.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-										</div>
-
-										<!-- Newest Videos Slider Item -->
-										<div class="owl-item">
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_1.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_2.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_3.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_4.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-										</div>
-
-										<!-- Newest Videos Slider Item -->
-										<div class="owl-item">
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_1.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_2.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_3.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Newest Videos Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="side_post_image"><div><img src="images/vid_4.jpg" alt=""></div></div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Advertising 2 -->
-
-						<div class="sidebar_section">
-							<div class="advertising_2">
-								<div class="advertising_background" style="background-image:url(images/post_18.jpg)"></div>
-								<div class="advertising_2_content d-flex flex-column align-items-center justify-content-center">
-									<div class="advertising_2_link"><a href="#">Turbulent <span>Mind</span></a></div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Future Events -->
-
-						<div class="sidebar_section future_events">
-							<div class="sidebar_title_container">
-								<div class="sidebar_title">Future Events</div>
-								<div class="sidebar_slider_nav">
-									<div class="custom_nav_container sidebar_slider_nav_container">
-										<div class="custom_prev custom_prev_events">
-											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-												 width="7px" height="12px" viewBox="0 0 7 12" enable-background="new 0 0 7 12" xml:space="preserve">
-												<polyline fill="#bebebe" points="0,5.61 5.609,0 7,0 7,1.438 2.438,6 7,10.563 7,12 5.609,12 -0.002,6.39 "/>
-											</svg>
-										</div>
-								        <ul id="custom_dots" class="custom_dots custom_dots_events">
-											<li class="custom_dot custom_dot_events active"><span></span></li>
-											<li class="custom_dot custom_dot_events"><span></span></li>
-											<li class="custom_dot custom_dot_events"><span></span></li>
-										</ul>
-										<div class="custom_next custom_next_events">
-											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-												 width="7px" height="12px" viewBox="0 0 7 12" enable-background="new 0 0 7 12" xml:space="preserve">
-												<polyline fill="#bebebe" points="6.998,6.39 1.389,12 -0.002,12 -0.002,10.562 4.561,6 -0.002,1.438 -0.002,0 1.389,0 7,5.61 "/>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sidebar_section_content">
-
-								<!-- Sidebar Slider -->
-								<div class="sidebar_slider_container">
-									<div class="owl-carousel owl-theme sidebar_slider_events">
-
-										<!-- Future Events Slider Item -->
-										<div class="owl-item">
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">13</div>
-															<div class="event_month">apr</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">27</div>
-															<div class="event_month">apr</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">02</div>
-															<div class="event_month">may</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">09</div>
-															<div class="event_month">may</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-										</div>
-
-										<!-- Future Events Slider Item -->
-										<div class="owl-item">
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">13</div>
-															<div class="event_month">apr</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">27</div>
-															<div class="event_month">apr</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">02</div>
-															<div class="event_month">may</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">09</div>
-															<div class="event_month">may</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-										</div>
-
-										<!-- Future Events Slider Item -->
-										<div class="owl-item">
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">13</div>
-															<div class="event_month">apr</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">27</div>
-															<div class="event_month">apr</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">02</div>
-															<div class="event_month">may</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
-
-											<!-- Future Events Post -->
-											<div class="side_post">
-												<a href="post.html">
-													<div class="d-flex flex-row align-items-xl-center align-items-start justify-content-start">
-														<div class="event_date d-flex flex-column align-items-center justify-content-center">
-															<div class="event_day">09</div>
-															<div class="event_month">may</div>
-														</div>
-														<div class="side_post_content">
-															<div class="side_post_title">How Did van Gogh’s Turbulent Mind</div>
-															<small class="post_meta">Katy Liu<span>Sep 29</span></small>
-														</div>
-													</div>
-												</a>
-											</div>
 
 										</div>
 
@@ -1072,7 +422,7 @@
 			<div class="row row-lg-eq-height">
 				<div class="col-lg-12">
 					<div class="footer_content">
-						<div class="footer_logo"><a href="#">avision</a></div>
+						<div class="footer_logo"><a href="index.php">WESATU</a></div>
 						<div class="footer_social">
 							<ul>
 								<li class="footer_social_facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -1083,7 +433,7 @@
 								<li class="footer_social_google"><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
-						<div class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						<div class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> PROJECT 1 |  WEBSITE DESA TUGU | WESATU |   <a href="https://colorlib.com" target="_blank">KELOMPOK 5</a>
 						</div>
 					</div>
 				</div>

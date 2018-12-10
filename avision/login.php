@@ -1,81 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>WESATU</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <title> Login </title>
+    <link href="/include?style_admin.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title" style="text-align: center; color: white;">Masuk</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    <div class="center">
+        <div class="login100-form-avatar">
+                        <img src="tugu image/login.png" alt="AVATAR">
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+    <div id="header"><center>Form Login</center></div>
+    <form name="form1" method="post" action="cek_login.php">
+        <table align="center" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="30" align="center">Username</td>
+                <td width="154" valign="middle"> : <input name="id_user" type="text" id="id_user"></td>
+            </tr>
+            <br>
+            <tr>
+                <td align="center">Password</td>
+                <td> : <input name="password" type="password" id="password"></td>
+            </tr>
+            <tr>
+            <td colspan="3"><input type="submit" name="submit" value="Login"></td>
+            </tr>
+            
+                    <div class="text-center w-full p-t-25 p-b-230">
+                        <a href="#" class="txt1">
+                            Forgot Username / Password?
+                        </a>
+                    </div>
 
-    <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
-
+                    <div class="text-center w-full">
+                        <a class="txt1" href="index.html">
+                            Create new account
+                            <i class="fa fa-long-arrow-right"></i>                      
+                        </a>
+                    </div>
+        </table>
+    </form>
 </body>
-
 </html>
